@@ -303,3 +303,29 @@ begin
                 readln;
             end;
         until false;
+
+        repeat  /// biodata pengguna
+            write('Nama : ');
+            readln(nama);
+            write('Umur (tahun) : ');
+            readln(umur);
+            write('Jenis Kelamin (P/L) : ');
+            readln(jeniskelamin);
+            if (jeniskelamin = 'P') or (jeniskelamin = 'L') then   
+            begin
+                write('Berat Badan (kg) : ');
+                readln(bb);
+                write('Tinggi Badan (cm) : ');
+                readln(tb);
+                break;
+            end
+            else 
+            begin
+                writeln('Pilihan tidak valid. Ulangi dengan memasukkan huruf P atau L (kapital) saja.');
+                writeln('Tekan "enter" untuk kembali ke biodata.');
+                readln;
+                clrscr;
+            end;
+        until false;
+
+
