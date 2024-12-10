@@ -41,3 +41,30 @@ begin
     readln(PilihanMetode);
 end;
 
+procedure TampilkanMetode(PilihanMetode : integer);
+begin
+    if PilihanMetode = 1 then
+    begin
+        clrscr;
+        writeln('--------------------------------------------------------');
+        writeln('Baik! Anda telah memilih Metode Mandiri!');
+        writeln('Pastikan Anda telah mengetahui makanan apa saja yang');
+        writeln('telah Anda konsumsi hari ini beserta jumlah kalorinya!');
+        writeln('--------------------------------------------------------');
+        writeln;
+    end;
+
+    if PilihanMetode = 2 then 
+    begin
+        clrscr;
+        writeln('--------------------------------------------------------');
+        writeln('Baik! Anda telah memilih Metode Tampilan Menu!');
+        writeln('Pastikan Anda telah mengetahui makanan apa saja');
+        writeln('yang telah Anda konsumsi hari ini. Metode ini hanya');
+        writeln('memperkirakan kalori yang telah Anda makan melalui menu');
+        writeln('yang Anda pilih. Menu yang ditampilkan bisa saja tidak');
+        writeln('ada pada daftar makanan yang telah Anda makan hari ini!');
+        writeln('--------------------------------------------------------');
+        writeln;
+    end;
+end;
