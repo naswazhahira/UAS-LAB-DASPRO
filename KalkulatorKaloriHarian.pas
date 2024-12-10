@@ -264,3 +264,25 @@ begin
 
     TotalKaloriKonsumsi := TotalKaloriKonsumsi + 0;
 
+     if (jeniskelamin = 'P') then
+    begin
+        KaloriAkhir := (bmrP - TotalKaloriKonsumsi);
+        diet := (bmrP - 500);
+        totaldiet := (diet - TotalKaloriKonsumsi);
+        naikbb := (bmrP + 500);
+        totalnaikbb := (naikbb - TotalKaloriKonsumsi);
+
+        if (bumilsui = 'Y') or (bumilsui = 'y') then
+        KaloriAkhir := (bmrMILSUI - TotalKaloriKonsumsi)
+        else read;
+    end 
+    else if jeniskelamin = 'L' then
+    begin 
+        KaloriAkhir := (bmrL - TotalKaloriKonsumsi);
+        diet := (bmrL - 500);
+        totaldiet := (diet - TotalKaloriKonsumsi);
+        naikbb := (bmrL + 500);
+        totalnaikbb := (naikbb - TotalKaloriKonsumsi);
+    end;
+end;
+
