@@ -360,6 +360,22 @@ begin
             writeln('Kebutuhan Kalori Anda Per Hari (BMR): ', bmrP:0:2, ' kalori');
             writeln;
 
+            if (bumilsui = 'T') or (bumilsui = 't') then
+            begin
+                writeln('Jika Anda Sedang dalam Program Diet, Maka Anda Membutuhkan Kalori sebanyak ',diet:0:2,' Per Hari');
+                writeln('Jika Anda Sedang dalam Program Menaikkan Berat Badan, Maka Anda Membutuhkan Kalori sebanyak ',naikbb:0:2,' Per Hari');
+            end 
+
+            else if (bumilsui = 'Y') or (bumilsui = 'y') then
+            begin
+                writeln('Kebutuhan Kalori Anda Per Hari Bertambah Karena Anda ',ket0);
+                writeln('Maka Kebutuhan Kalori Anda Saat Ini (BMR): ', bmrMILSUI:0:2, ' kalori');
+            end
+            else read;
+        end 
+
+        
+
 
 
 
