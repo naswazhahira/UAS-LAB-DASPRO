@@ -381,6 +381,24 @@ begin
             writeln('Jika Anda Sedang dalam Program Menaikkan Berat Badan, Maka Anda Membutuhkan Kalori sebanyak ',naikbb:0:2,' Per Hari');
         end;
 
+         writeln;
+        writeln ('Total Kalori yang Anda Konsumsi Hari ini sebanyak ',TotalKaloriKonsumsi:0:2,' kalori');
+        
+        if (KaloriAkhir > 0) then 
+        begin 
+            writeln('Anda perlu menambah asupan sebanyak ',KaloriAkhir:0:2,' kalori. (Untuk Menjaga Berat Badan)');
+            if (jeniskelamin = 'P') and ((bumilsui = 'T') or (bumilsui = 't')) then
+            begin 
+                writeln('Anda perlu menambah asupan sebanyak ',totaldiet:0:2,' kalori. (Untuk Program Diet)');
+                writeln('Anda perlu menambah asupan sebanyak ',totalnaikbb:0:2,' kalori. (Untuk Program Menaikkan Berat Badan)');
+            end
+            else if (jeniskelamin = 'L') then 
+            begin 
+                writeln('Anda perlu menambah asupan sebanyak ',totaldiet:0:2,' kalori. (Untuk Program Diet)');
+                writeln('Anda perlu menambah asupan sebanyak ',totalnaikbb:0:2,' kalori. (Untuk Program Menaikkan Berat Badan)');
+            end
+        end
+
 
         
 
