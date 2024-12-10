@@ -345,4 +345,21 @@ begin
 
         PilihAktivitas; ///memanggil procedure pilih aktivitas
 
+        clrscr;
+        if (PilihanMetode = 1 ) then
+        MetodeMandiri   /// memanggil procedure metode mandiri jika memilih 1 pada pilihan metode 
+        else if (PilihanMetode = 2) then
+        MetodeMenu;     /// memanggil procedure metode menu jika memilih 2 pada pilihan metode 
+
+        clrscr;
+
+        KebutuhanKalori;    /// memanggil procedure kebutuhan kalori
+        KaloriKonsumsi;     /// memanggil procedure kalori konsumsi
+        if jeniskelamin = 'P' then
+        begin 
+            writeln('Kebutuhan Kalori Anda Per Hari (BMR): ', bmrP:0:2, ' kalori');
+            writeln;
+
+
+
 
