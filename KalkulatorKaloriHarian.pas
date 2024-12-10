@@ -328,4 +328,21 @@ begin
             end;
         until false;
 
+        if (jeniskelamin = 'P') then    /// pertanyaan tambahan jika perempuan itu hamil atau menyusui
+        begin
+            writeln;
+            write('Apakah Anda Ibu Hamil atau Menyusui? (Y/T) : ');
+            readln(bumilsui);
+
+            if (bumilsui = 'Y') or (bumilsui = 'y') then
+            begin
+                KeteranganHamilSusu;    ///memanggil procedure keterangan hamil susu 
+                clrscr;
+            end
+            else if (bumilsui = 'T') or (bumilsui = 't') then
+            clrscr;
+        end;
+
+        PilihAktivitas; ///memanggil procedure pilih aktivitas
+
 
