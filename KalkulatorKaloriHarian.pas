@@ -149,3 +149,37 @@ begin
         writeln;
     end;
 end;
+
+procedure MetodeMenu;
+begin
+    writeln('============== Metode Menu ==============');
+    writeln('A. Nasi Putih 100 gram/1 centong nasi');
+    writeln('B. Nasi Merah 100 gram/1 centong nasi');
+    writeln('C. Roti Putih 1 iris');
+    writeln('D. Roti Gandum 1 iris');
+    writeln('E. Mie Instan 80 gram');
+    writeln('F. Hamburger 100 gram ');
+    writeln('G. Cheeseburger 120 gram');
+    writeln('H. Fried Chicken (1 potong paha) 100 gram');
+    writeln('I. Fried Chicken (1 potong dada) 150 gram');
+    writeln('J. Kentang Goreng 120 gram');
+    writeln('K. Pizza (1 slice, 10 inch) 120 gram');
+    writeln('L. Hotdog 150 gram ');
+    writeln('M. Donat Cokelat 80 gram');
+    writeln('N. Milkshake (medium) 300ml');
+    writeln('O. Soda (medium) 350ml');
+    writeln('P. Es Krim Sundae 200 gram');
+    writeln('Q. Ice Cream Cone 100 gram');
+    writeln('R. Kopi Hitam 250ml ');
+    writeln('S. Teh Manis 250ml');
+    writeln('T. Diet Coke 350ml');
+    writeln('U. Kopi dengan susu dan gula 250ml');
+    writeln('V. Susu Fullcream 250ml');
+    writeln('W. Apel 100 gram');
+    writeln('X. Pisang 100 gram ');
+    writeln('Y. Semangka 100 gram');
+    writeln('Z. Jeruk 100 gram ');
+    writeln;
+    write('Jumlah makanan dan minuman yang dikonsumsi : ');
+    readln(jumlahKonsumsi);
+    writeln;
