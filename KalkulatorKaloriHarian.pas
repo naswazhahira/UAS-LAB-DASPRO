@@ -174,6 +174,53 @@ begin
     writeln('S. Teh Manis 250ml');
     writeln('T. Diet Coke 350ml');
     writeln('U. Kopi dengan susu dan gula 250ml');
+
+    for i := 1 to jumlahKonsumsi do 
+    with data2 [i] do 
+    begin
+        write('Masukkan Kode A-Z : ');
+        readln(mamiTM);
+        write('Masukkan Jumlah Makanan/Minuman yang Dikonsumsi : ');
+        readln(jumlahmamiTM);
+        writeln;
+    end;
+
+    for i := 1 to jumlahKonsumsi do 
+    with data2 [i] do 
+    begin 
+        case mamiTM of
+        'A': kaloriTM := 175; // Nasi Putih
+        'B': kaloriTM := 110; // Nasi Merah
+        'C': kaloriTM := 80;  // Roti Putih
+        'D': kaloriTM := 70;  // Roti Gandum
+        'E': kaloriTM := 350; // Mie Instan
+        'F': kaloriTM := 250; // Hamburger
+        'G': kaloriTM := 303; // Cheeseburger
+        'H': kaloriTM := 200; // Fried Chicken (paha)
+        'I': kaloriTM := 280; // Fried Chicken (dada)
+        'J': kaloriTM := 365; // Kentang Goreng
+        'K': kaloriTM := 285; // Pizza
+        'L': kaloriTM := 290; // Hotdog
+        'M': kaloriTM := 240; // Donat Cokelat
+        'N': kaloriTM := 200; // Milkshake
+        'O': kaloriTM := 140; // Soda
+        'P': kaloriTM := 210; // Es Krim Sundae
+        'Q': kaloriTM := 150; // Ice Cream Cone
+        'R': kaloriTM := 2;   // Kopi Hitam
+        'S': kaloriTM := 100; // Teh Manis
+        'T': kaloriTM := 1;   // Diet Coke
+        'U': kaloriTM := 150; // Kopi susu dan gula
+        'V': kaloriTM := 200; // Susu Fullcream
+        'W': kaloriTM := 52;  // Apel
+        'X': kaloriTM := 89;  // Pisang
+        'Y': kaloriTM := 30;  // Semangka
+        'Z': kaloriTM := 47;  // Jeruk
+        else
+            kaloriTM := 0;
+        end;
+    end;
+end;
+
     writeln('V. Susu Fullcream 250ml');
     writeln('W. Apel 100 gram');
     writeln('X. Pisang 100 gram ');
