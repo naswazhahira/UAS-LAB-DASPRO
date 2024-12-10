@@ -413,6 +413,14 @@ begin
             writeln('Anda telah mengkonsumsi makanan dan minuman melebihi kebutuhan sebanyak ', KaloriAkhir:0:2,' kalori');
             end;
 
+        writeln;
+        write('Apakah ingin mengulang program ini lagi? (Y/T): ');
+        readln(LanjutPesan);
+
+    until (LanjutPesan = 'T') or (LanjutPesan = 't');   /// jika menjawab 'T' atau 't' maka program akan berhenti
+
+end.
+
 
 
         
