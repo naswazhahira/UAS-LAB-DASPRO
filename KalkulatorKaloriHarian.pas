@@ -373,6 +373,14 @@ begin
             end
             else read;
         end 
+        else if jeniskelamin = 'L' then
+        begin
+            writeln('Kebutuhan Kalori Anda Per Hari (BMR): ', bmrL:0:2, ' kalori');
+            writeln;
+            writeln('Jika Anda Sedang dalam Program Diet, Maka Anda Membutuhkan Kalori sebanyak ',diet:0:2,' Per Hari');
+            writeln('Jika Anda Sedang dalam Program Menaikkan Berat Badan, Maka Anda Membutuhkan Kalori sebanyak ',naikbb:0:2,' Per Hari');
+        end;
+
 
         
 
