@@ -24,7 +24,6 @@ aktv, ket,bmrP, bmrL, bmrMILSUI, TotalKaloriKonsumsi, KaloriAkhir, diet, totaldi
 data1 : array [1..100] of mandiriM;
 data2 : array [1..100] of menuTM;
 
-
 procedure welcome;
 begin
     clrscr;
@@ -381,7 +380,7 @@ begin
             writeln('Jika Anda Sedang dalam Program Menaikkan Berat Badan, Maka Anda Membutuhkan Kalori sebanyak ',naikbb:0:2,' Per Hari');
         end;
 
-         writeln;
+        writeln;
         writeln ('Total Kalori yang Anda Konsumsi Hari ini sebanyak ',TotalKaloriKonsumsi:0:2,' kalori');
         
         if (KaloriAkhir > 0) then 
@@ -398,6 +397,22 @@ begin
                 writeln('Anda perlu menambah asupan sebanyak ',totalnaikbb:0:2,' kalori. (Untuk Program Menaikkan Berat Badan)');
             end
         end
+        else if (KaloriAkhir < 0) then 
+        begin    
+            if (jeniskelamin = 'P') then
+            begin
+                KaloriAkhir := TotalKaloriKonsumsi - bmrP;
+
+                if (bumilsui = 'Y') or (bumilsui = 'y') then
+                KaloriAkhir := TotalKaloriKonsumsi - bmrMILSUI
+            else read;
+            end 
+            else if jeniskelamin = 'L' then
+                KaloriAkhir := TotalKaloriKonsumsi - bmrL;
+            
+            writeln('Anda telah mengkonsumsi makanan dan minuman melebihi kebutuhan sebanyak ', KaloriAkhir:0:2,' kalori');
+            end;
+
 
 
         
