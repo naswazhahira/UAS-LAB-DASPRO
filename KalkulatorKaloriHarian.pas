@@ -128,3 +128,24 @@ begin
     end;
     end;
 end;
+
+procedure MetodeMandiri;
+begin
+    writeln('============== Metode Mandiri ==============');
+    writeln;
+    write('Jumlah makanan dan minuman yang dikonsumsi : ');
+    readln(jumlahKonsumsi);
+    writeln;
+
+    for i := 1 to jumlahKonsumsi do 
+    with data1 [i] do 
+    begin
+        write('Masukkan Nama Makanan/Minuman : ');
+        readln(mamiM);
+        write('Masukkan Jumlah Makanan/Minuman yang Dikonsumsi : ');
+        readln(jumlahmamiM);
+        write('Masukkan Jumlah Kalori : ');
+        readln(kaloriM);
+        writeln;
+    end;
+end;
