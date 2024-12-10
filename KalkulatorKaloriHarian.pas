@@ -286,3 +286,20 @@ begin
     end;
 end;
 
+begin
+    repeat
+        repeat
+            welcome;    /// memanggil procedure welcome
+            if (PilihanMetode = 1 ) or (PilihanMetode = 2) then
+            begin
+                clrscr;
+                TampilkanMetode(PilihanMetode); ///memanggil procedure tampilkan metode
+                break;
+            end
+            else
+            begin
+                writeln('Pilihan tidak valid. Ulangi dengan memasukkan angka 1 atau 2 saja.');
+                writeln('Tekan "enter" untuk kembali ke halaman utama.');
+                readln;
+            end;
+        until false;
