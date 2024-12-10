@@ -174,6 +174,15 @@ begin
     writeln('S. Teh Manis 250ml');
     writeln('T. Diet Coke 350ml');
     writeln('U. Kopi dengan susu dan gula 250ml');
+    writeln('V. Susu Fullcream 250ml');
+    writeln('W. Apel 100 gram');
+    writeln('X. Pisang 100 gram ');
+    writeln('Y. Semangka 100 gram');
+    writeln('Z. Jeruk 100 gram ');
+    writeln;
+    write('Jumlah makanan dan minuman yang dikonsumsi : ');
+    readln(jumlahKonsumsi);
+    writeln;
 
     for i := 1 to jumlahKonsumsi do 
     with data2 [i] do 
@@ -221,12 +230,17 @@ begin
     end;
 end;
 
-    writeln('V. Susu Fullcream 250ml');
-    writeln('W. Apel 100 gram');
-    writeln('X. Pisang 100 gram ');
-    writeln('Y. Semangka 100 gram');
-    writeln('Z. Jeruk 100 gram ');
-    writeln;
-    write('Jumlah makanan dan minuman yang dikonsumsi : ');
-    readln(jumlahKonsumsi);
-    writeln;
+procedure KebutuhanKalori;  /// rumus BMR atau kebutuhan kalori harian
+begin
+    if (jeniskelamin = 'P') then
+    begin
+        bmrP := ((655 + (9.6 * bb) + (1.8 * tb) - (4.7 * umur))*aktv);
+        
+        if (bumilsui = 'Y') or (bumilsui = 'y') then
+        bmrMILSUI := (bmrP + ket)
+        else clrscr;
+    end
+    else if (jeniskelamin = 'L') then 
+    bmrL := ((66 + (13.7 * bb) + (5 * tb) - (6.78 * umur)) * aktv);
+end;
+
