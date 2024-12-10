@@ -244,3 +244,23 @@ begin
     bmrL := ((66 + (13.7 * bb) + (5 * tb) - (6.78 * umur)) * aktv);
 end;
 
+procedure KaloriKonsumsi;   /// rumus kalori konsumsi
+begin
+    TotalKaloriKonsumsi := 0;
+
+    if (PilihanMetode = 1) then
+    begin 
+        for i := 1 to jumlahKonsumsi do 
+        with data1 [i] do 
+        TotalKaloriKonsumsi := (TotalKaloriKonsumsi + (kaloriM * jumlahmamiM));
+    end;
+
+    if (PilihanMetode = 2) then
+    begin 
+        for i := 1 to jumlahKonsumsi do 
+        with data2 [i] do 
+        TotalKaloriKonsumsi := (TotalKaloriKonsumsi + (kaloriTM * jumlahmamiTM));
+    end;
+
+    TotalKaloriKonsumsi := TotalKaloriKonsumsi + 0;
+
