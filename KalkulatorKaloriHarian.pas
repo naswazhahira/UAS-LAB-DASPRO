@@ -98,3 +98,33 @@ begin
     end;
     end;
 end;
+
+procedure PilihAktivitas;
+begin
+    clrscr;
+    writeln('===== Pilih Aktivitas =====');
+    writeln('1. Sangat Jarang  : sangat jarang olahraga ');
+    writeln('2. Jarang         : olahraga 1-3 hari/minggu');
+    writeln('3. Normal         : olahraga 3-5 hari/minggu');
+    writeln('4. Sering         : olahraga 6-7 hari/minggu');
+    writeln('5. Sangat Sering  : olahraga setiap hari (bisa 2x olahraga dalam sehari)');
+    writeln;
+    write ('Pilih Aktivitas (1-5) : ');
+    readln(aktivitas);
+
+    case aktivitas of
+    1 : aktv := sgtJarang; 
+    2 : aktv := jarang;
+    3 : aktv := normal; 
+    4 : aktv := sering; 
+    5 : aktv := sgtSering;
+    else
+    begin
+        writeln('Pilihan tidak valid. Ulangi dengan memasukkan nomor 1-5 saja.');
+        writeln('Tekan "enter" untuk mencoba kembali...');
+        readln;
+        clrscr;
+        PilihAktivitas;
+    end;
+    end;
+end;
