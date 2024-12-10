@@ -68,3 +68,33 @@ begin
         writeln;
     end;
 end;
+
+procedure KeteranganHamilSusu;
+begin
+    clrscr;
+    writeln('===== Keterangan Ibu Hamil atau Menyusui =====');
+    writeln('1. Hamil trisemester 1');
+    writeln('2. Hamil trisemester 2');
+    writeln('3. Hamil trisemester 3');
+    writeln('4. Menyusui pada 6 bulan pertama');
+    writeln('5. Menyusui pada 6 bulan kedua');
+    writeln;
+    write ('Pilih Keterangan Anda (1-5) : ');
+    readln(Keterangan);
+
+    case Keterangan of
+    1 : begin ket0 := 'Hamil trisemester 1'; ket := 180; end; 
+    2 : begin ket0 := 'Hamil trisemester 2'; ket := 300; end; 
+    3 : begin ket0 := 'Hamil trisemester 3'; ket := 300; end; 
+    4 : begin ket0 := 'Menyusui pada 6 bulan pertama'; ket := 330; end;
+    5 : begin ket0 := 'Menyusui pada 6 bulan kedua'; ket := 400; end; 
+    else
+    begin
+        writeln('Pilihan tidak valid. Ulangi dengan memasukkan nomor 1-5 saja.');
+        writeln('Tekan "enter" untuk mencoba kembali...');
+        readln;
+        clrscr;
+        KeteranganHamilSusu;
+    end;
+    end;
+end;
