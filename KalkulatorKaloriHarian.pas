@@ -420,11 +420,3 @@ begin
     until (LanjutPesan = 'T') or (LanjutPesan = 't');   /// jika menjawab 'T' atau 't' maka program akan berhenti
 
 end.
-
-
-
-        
-
-
-
-
